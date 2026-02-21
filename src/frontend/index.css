@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Warm cream background with subtle amber tint */
+    --background: 0.98 0.015 75;
+    --foreground: 0.25 0.02 45;
+    /* Cards with slight elevation */
+    --card: 1 0.008 80;
+    --card-foreground: 0.25 0.02 45;
+    --popover: 1 0.008 80;
+    --popover-foreground: 0.25 0.02 45;
+    /* Warm orange primary - appetite-stimulating */
+    --primary: 0.65 0.18 45;
+    --primary-foreground: 0.98 0.01 75;
+    /* Fresh sage green secondary */
+    --secondary: 0.72 0.09 145;
+    --secondary-foreground: 0.25 0.03 145;
+    /* Soft warm muted */
+    --muted: 0.94 0.012 70;
+    --muted-foreground: 0.52 0.015 50;
+    /* Rich coral accent for CTAs */
+    --accent: 0.62 0.21 25;
+    --accent-foreground: 0.98 0.01 75;
+    --destructive: 0.55 0.22 15;
+    --destructive-foreground: 0.98 0.01 75;
+    --border: 0.88 0.015 65;
+    --input: 0.92 0.012 70;
+    --ring: 0.65 0.18 45;
+    /* Status colors */
+    --status-pending: 0.75 0.14 85;
+    --status-preparing: 0.65 0.15 240;
+    --status-ready: 0.68 0.17 145;
+    --status-completed: 0.55 0.02 45;
+    --status-cancelled: 0.55 0.22 15;
+    --chart-1: 0.65 0.18 45;
+    --chart-2: 0.72 0.09 145;
+    --chart-3: 0.62 0.21 25;
+    --chart-4: 0.75 0.14 85;
+    --chart-5: 0.65 0.15 240;
+    --sidebar: 0.98 0.015 75;
+    --sidebar-foreground: 0.25 0.02 45;
+    --sidebar-primary: 0.65 0.18 45;
+    --sidebar-primary-foreground: 0.98 0.01 75;
+    --sidebar-accent: 0.94 0.012 70;
+    --sidebar-accent-foreground: 0.25 0.02 45;
+    --sidebar-border: 0.88 0.015 65;
+    --sidebar-ring: 0.65 0.18 45;
+  }
+
+  .dark {
+    /* Rich dark charcoal with warm undertone */
+    --background: 0.18 0.015 45;
+    --foreground: 0.95 0.008 75;
+    /* Elevated cards in dark mode */
+    --card: 0.22 0.018 50;
+    --card-foreground: 0.95 0.008 75;
+    --popover: 0.24 0.018 50;
+    --popover-foreground: 0.95 0.008 75;
+    /* Brighter orange for dark backgrounds */
+    --primary: 0.72 0.20 50;
+    --primary-foreground: 0.15 0.015 45;
+    /* Muted sage in dark */
+    --secondary: 0.65 0.11 150;
+    --secondary-foreground: 0.95 0.008 75;
+    --muted: 0.28 0.018 50;
+    --muted-foreground: 0.68 0.012 60;
+    /* Bright coral accent */
+    --accent: 0.68 0.23 30;
+    --accent-foreground: 0.95 0.008 75;
+    --destructive: 0.62 0.24 20;
+    --destructive-foreground: 0.95 0.008 75;
+    --border: 0.32 0.018 50;
+    --input: 0.28 0.018 50;
+    --ring: 0.72 0.20 50;
+    /* Dark mode status colors */
+    --status-pending: 0.78 0.16 88;
+    --status-preparing: 0.70 0.18 245;
+    --status-ready: 0.72 0.19 148;
+    --status-completed: 0.62 0.02 50;
+    --status-cancelled: 0.62 0.24 20;
+    --chart-1: 0.72 0.20 50;
+    --chart-2: 0.65 0.11 150;
+    --chart-3: 0.68 0.23 30;
+    --chart-4: 0.78 0.16 88;
+    --chart-5: 0.70 0.18 245;
+    --sidebar: 0.22 0.018 50;
+    --sidebar-foreground: 0.95 0.008 75;
+    --sidebar-primary: 0.72 0.20 50;
+    --sidebar-primary-foreground: 0.15 0.015 45;
+    --sidebar-accent: 0.28 0.018 50;
+    --sidebar-accent-foreground: 0.95 0.008 75;
+    --sidebar-border: 0.32 0.018 50;
+    --sidebar-ring: 0.72 0.20 50;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
