@@ -24,4 +24,74 @@ export default {
         primary: {
           DEFAULT: "oklch(var(--primary) / <alpha-value>)",
           foreground: "oklch(var(--primary-foreground))",
-    
+        },
+        secondary: {
+          DEFAULT: "oklch(var(--secondary) / <alpha-value>)",
+          foreground: "oklch(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "oklch(var(--destructive) / <alpha-value>)",
+          foreground: "oklch(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "oklch(var(--muted) / <alpha-value>)",
+          foreground: "oklch(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "oklch(var(--accent) / <alpha-value>)",
+          foreground: "oklch(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "oklch(var(--popover))",
+          foreground: "oklch(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "oklch(var(--card))",
+          foreground: "oklch(var(--card-foreground))",
+        },
+        sidebar: {
+          DEFAULT: "oklch(var(--sidebar))",
+          foreground: "oklch(var(--sidebar-foreground))",
+          primary: "oklch(var(--sidebar-primary))",
+          "primary-foreground": "oklch(var(--sidebar-primary-foreground))",
+          accent: "oklch(var(--sidebar-accent))",
+          "accent-foreground": "oklch(var(--sidebar-accent-foreground))",
+          border: "oklch(var(--sidebar-border))",
+          ring: "oklch(var(--sidebar-ring) / <alpha-value>)",
+        },
+        "status-pending": "oklch(var(--status-pending) / <alpha-value>)",
+        "status-preparing": "oklch(var(--status-preparing) / <alpha-value>)",
+        "status-ready": "oklch(var(--status-ready) / <alpha-value>)",
+        "status-completed": "oklch(var(--status-completed) / <alpha-value>)",
+        "status-cancelled": "oklch(var(--status-cancelled) / <alpha-value>)",
+        chart: {
+          1: "oklch(var(--chart-1) / <alpha-value>)",
+          2: "oklch(var(--chart-2) / <alpha-value>)",
+          3: "oklch(var(--chart-3) / <alpha-value>)",
+          4: "oklch(var(--chart-4) / <alpha-value>)",
+          5: "oklch(var(--chart-5) / <alpha-value>)",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [typography, containerQueries, animate],
+};
