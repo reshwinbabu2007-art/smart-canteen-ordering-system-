@@ -7,6 +7,7 @@
     "setup": "pnpm i && dfx canister create backend && dfx generate backend && dfx deploy",
     "start": "vite --port 3000",
     "prebuild": "dfx generate backend",
+    "vercel-build": "vite build && npm run copy:env",
     "build:skip-bindings": "vite build && pnpm copy:env",
     "copy:env": "cp env.json dist/",
     "typescript-check": "tsc --noEmit --pretty",
